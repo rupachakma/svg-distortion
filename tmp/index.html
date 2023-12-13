@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cuberto Making SVG Distortion Effect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0">
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 463 463" style="position:absolute;top:-1px;left:-1px;height:0;width:0;" id="svg-distortion">
+      <defs>
+        <filter id="svg-distortion-filter">
+          <feTurbulence type="fractalNoise" baseFrequency="0.01 0.003" stitchTiles="noStitch" numOctaves="1" seed="2" result="warp"></feTurbulence>
+          <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="1" in="SourceGraphic" in2="warp"></feDisplacementMap>
+        </filter>
+      </defs>
+    </svg>
+    <div class="cb-layout" id="view-main">
+      <div class="cb-content">
+        <section class="cb-demo">
+          <div class="cb-demo-bgs">
+            <div class="cb-demo-bg -v1 -active"></div>
+            <div class="cb-demo-bg -v2"></div>
+            <div class="cb-demo-bg -v3"></div>
+          </div>
+          <div class="cb-demo-content">
+            <div class="cb-demo-container">
+              <div class="cb-demo-grid">
+                <div class="cb-demo-col -left">
+                  <div class="cb-demo-figures" style="filter:url(#svg-distortion-filter)">
+                    <div class="cb-demo-figure -active">
+                      <!-- You also can use images-->
+                      <video src="https://media.giphy.com/media/xTiTntp4GtRdey7GH6/giphy.mp4?cid=790b761169955b0690b656b020d1091896781979d902f167&amp;rid=giphy.mp4&amp;ct=g" autoplay playsinline muted loop></video>
+                    </div>
+                    <div class="cb-demo-figure">
+                      <video src="https://media.giphy.com/media/l1J9yP3Svuk0Xa6v6/giphy.mp4?cid=790b7611ac6570c64c378ee4f585004d75860108452a6427&amp;rid=giphy.mp4&amp;ct=g" autoplay playsinline muted loop></video>
+                    </div>
+                    <div class="cb-demo-figure">
+                      <video src="https://media.giphy.com/media/l0HlCxHqQRmGQbSes/giphy.mp4?cid=790b761190e9bf855149856beb6822f1eb425375e6b9d0a5&amp;rid=giphy.mp4&amp;ct=g" autoplay playsinline muted loop></video>
+                    </div>
+                  </div>
+                </div>
+                <div class="cb-demo-col -right">
+                  <div class="cb-demo-navs">
+                    <div class="cb-demo-nav -active"><span>Fast and super lightweight 🚀</span></div>
+                    <div class="cb-demo-nav"><span>Easy to use 💡 and understand</span></div>
+                    <div class="cb-demo-nav"><span>It looks nice 💎 awesome and clean</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="cb-outro">
+          <div class="cb-outro-content">
+            <div class="cb-outro-container">
+              <div class="cb-outro-header">
+                <h2>Credits</h2>
+              </div>
+              <div class="cb-outro-list">
+                <div class="cb-outro-list-item"><a href="//cuberto.com/" target="_blank">Cuberto</a></div>
+                <div class="cb-outro-list-item"><a href="//greensock.com/gsap/" target="_blank">GreenSock GSAP</a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="/assets/js/bundle.js" defer></script>
+  </body>
+</html>
